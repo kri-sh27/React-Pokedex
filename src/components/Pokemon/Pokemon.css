@@ -1,9 +1,16 @@
-.pokemon{
+.pokemon-wrapper{
+    display: block;
     flex-basis: 30%;
+    text-decoration: none;
+    color: black;
+}
+
+.pokemon{
+    /* flex-basis: 30%; */
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     height: 300px;
     max-width: 400px;
     margin-top: 4rem;
