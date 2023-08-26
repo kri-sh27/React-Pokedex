@@ -5,9 +5,8 @@ import axios from "axios";
 import usePokemon from "../../hooks/usePokemon";
 import Pokemon from "../Pokemon/Pokemon";
 
-function PokemonDetails() {
-  const { id } = useParams();
-  const [pokemon,pokemonListState] = usePokemon(id);
+function PokemonDetails({pokemonName}) {
+  const [pokemon,pokemonListState] = usePokemon(pokemonName);
 
   return (
     <>
