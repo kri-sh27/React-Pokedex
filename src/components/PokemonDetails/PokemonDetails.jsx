@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import "./PokemonDetails.css";
-import { Link, useParams,  } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import usePokemon from "../../hooks/usePokemon";
 import Pokemon from "../Pokemon/Pokemon";
 
-function PokemonDetails({pokemonName}) {
-  const [pokemon,pokemonListState] = usePokemon(pokemonName);
+function PokemonDetails({ pokemonName }) {
+  const [pokemon, pokemonListState] = usePokemon(pokemonName);
 
   return (
     <>
@@ -35,20 +35,19 @@ function PokemonDetails({pokemonName}) {
       )}
 
       <div className="similar-pokemons">
-        
         <h2> Similar Pokemons</h2>
-        <div className='pokemon-similar-boxes'>
-                {pokemonListState.pokemonList.length > 0 &&  pokemonListState.pokemonList.map((pokemon) => (
-            <Pokemon
-              name={pokemon.name}
-              key={pokemon.id}
-              url={pokemon.image}
-              id={pokemon.id}
-            />
-          ))} 
-                
-            </div>
-            {/* <Pokemon name={pokemon.name} key={pokemon.id} url={pokemon.image} id={pokemon.id} /> */}
+        <div className="pokemon-similar-boxes">
+          {pokemonListState.pokemonList.length > 0 &&
+            pokemonListState.pokemonList.map((pokemon) => (
+              <Pokemon
+                name={pokemon.name}
+                key={pokemon.id}
+                url={pokemon.image}
+                id={pokemon.id}
+              />
+            ))}
+        </div>
+        {/* <Pokemon name={pokemon.name} key={pokemon.id} url={pokemon.image} id={pokemon.id} /> */}
       </div>
     </>
   );

@@ -6,10 +6,9 @@ import Pokemon from "../Pokemon/Pokemon";
 import usePokemonList from "../../hooks/usePokemonList";
 
 function PokemonList() {
-
   const DEFAULT_URL = "https://pokeapi.co/api/v2/pokemon";
 
-const [pokemonListState,setPokemonListState]=usePokemonList(DEFAULT_URL)
+  const [pokemonListState, setPokemonListState] = usePokemonList(DEFAULT_URL);
   return (
     <>
       {/* <button onClick={()=>setCount(count+1)}>Click</button>

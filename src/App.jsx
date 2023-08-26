@@ -9,14 +9,13 @@ function App() {
     //   pokdex
     //   <Pokedex />
     // </>
- 
- <Routes>
-  <Route path="/" element={<Pokedex/>}/>
-  <Route path="/pokemon/:id" element={<PokemonDetails/>}/>
-  <Route path="*" element={<h1>Not Found</h1>}/>
 
- </Routes>
-    );
+    <Routes>
+      <Route path="/" element={<Pokedex />} />
+      <Route path="/pokemon/:id" element={<PokemonDetails />} />
+      <Route path="*" element={<h1>Not Found</h1>} />
+    </Routes>
+  );
 }
 
 export default App;
